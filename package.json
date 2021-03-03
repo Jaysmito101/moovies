@@ -1,7 +1,7 @@
 {
-  "name": "JSMovie",
+  "name": "moovies",
   "version": "1.0.0",
-  "description": "Movie Name Search",
+  "description": "Movie Details API",
   "main": "server.js",
   "git": "https://github.com/Jaysmito101/JSMovie.git",
   "scripts": {
