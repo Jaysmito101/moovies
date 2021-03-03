@@ -1,6 +1,6 @@
 {
   "name": "moovies",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Movie Details API",
   "main": "moovies.js",
   "git": "https://github.com/Jaysmito101/JSMovie.git",
