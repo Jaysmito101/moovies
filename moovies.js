@@ -11,7 +11,7 @@ route.post('/search', (req, res) => {
 	scrape(req, res, encodeURI(req.body.title));
 });
 
-route.get('/search?q=:title', (req, res) => {
+route.get('/search/:title', (req, res) => {
 	scrape(req, res, encodeURI(req.params.title));
 });
 
