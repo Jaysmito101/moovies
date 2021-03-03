@@ -1,0 +1,16 @@
+{
+  "name": "msearch",
+  "version": "1.0.0",
+  "description": "Movie Name Search",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "author": "Jaysmito Mukherjee",
+  "license": "MIT",
+  "dependencies": {
+    "beautiful-scrape": "^0.0.3",
+    "express": "^4.17.1",
+    "requests": "^0.3.0"
+  }
+}
