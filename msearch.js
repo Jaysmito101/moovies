@@ -41,4 +41,4 @@ async function scrape(req, res, title){
 	}
 }
 
-module.exports = router;
+module.exports = route;
