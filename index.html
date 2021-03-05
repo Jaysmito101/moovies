@@ -2,8 +2,111 @@
 <html>
 <head>
 	<title>Moovies</title>
+	<style type="text/css">
+		body{
+			background-color: rgb(5, 5, 10);
+			color: rgba(200, 200, 200, 0.8);
+			padding: 100px;
+			font-family: "Arial";
+			padding-top: 30px;
+		}
+		h1{
+			font-family: Courier;
+			font-size: 80px;
+			text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9);
+		}
+		p{
+			font-size: 30px;
+			font-family: Tahoma;
+		}
+		li{
+			font-size: 25px;
+		}
+		.hoverer{
+			margin: 50px;
+			padding: 20px;
+			background-color: rgba(255, 255, 255, 0.9);
+			float:  left;
+			border: 2px solid #fff;
+			border-radius: 20px;
+			transition: 0.5s;
+		}
+		.hoverer:hover{
+			transform: scale(1.5);
+			box-shadow: 0px 0px 10px 5px #fff;
+		}
+		.hoverer:active{
+			background-color: rgba(255, 255, 255, 0.2);
+			transform: translateY(5px);
+		}
+		.hidden{
+			text-shadow: none;
+			color: rgb(5, 5, 10);
+		}
+		.visible{
+			text-shadow: none;
+			color: rgba(200, 200, 200, 0.8);
+		}
+	</style>
 </head>
 <body>
-<h1>Under Development</h1>
+	<center>
+<h1 style="text-align: center;"><strong id="header">Moovies</strong></h1>
+</center>
+<p>Moovies is a free and opensource api that is used to do stuff about moovies.</p>
+<p>Threre are a lot you can do with moovies.</p>
+<p>You can :</p>
+<ul>
+<li>Search for moovies with their titles.</li>
+<li>Get the plot of the movie if there is one available.</li>
+<li>Get the cast of the movie.</li>
+<li>Get plot summary, plot synopsis.</li>
+<li>Get reiews. [coming soon ... ]</li>
+<li>Get ratings. [coming soon ... ]</li>
+<li>and many more.....</li>
+</ul>
+<h2>Here are some useful links :&nbsp;</h2>
+<br><br>
+<a href="/change_log" target="_blank" rel="noopener"><div class="hoverer"><strong>Change Log</strong></div></a>
+<a href="/docs" target="_blank" rel="noopener"><div class="hoverer"><strong>Documentation</strong></div></a>
+<a href="https://github.com/Jaysmito101/moovies" target="_blank" rel="noopener"><div class="hoverer"><strong>Github</strong></div></a>
+<a href="https://www.npmjs.com/package/moovies" target="_blank" rel="noopener"><div class="hoverer"><strong>NPM JS</strong></div></a>
+<script type="text/javascript">
+	const header = "Moovies.js";
+	var temp;
+	window.onload = () => {
+		temp = "<span id='cursor' class='hidden'>|</span>";
+		document.getElementById('header').innerHTML = temp;
+		setInterval(() => {
+			if(document.getElementById("cursor").getAttribute("class") == "hidden"){
+				document.getElementById("cursor").setAttribute("class", "visible")
+			}
+			else{
+				document.getElementById("cursor").setAttribute("class", "hidden")
+			}
+		},  500);
+		write();
+	}
+
+	function write(){
+		document.getElementById("header").innerHTML = header.substring(0, document.getElementById("header").innerText.length) + temp;
+		if(document.getElementById("header").innerText.length == header.length + 1){
+			setTimeout(()=>{erase()}, 800);
+		}
+		else{
+			setTimeout(()=>{write()}, 200);
+		}
+	}
+
+	function erase(){
+		document.getElementById("header").innerHTML = header.substring(0, document.getElementById("header").innerText.length-2) + temp;
+		if(document.getElementById("header").innerText.length ==  1){
+			setTimeout(()=>{write()}, 800);
+		}
+		else{
+			setTimeout(()=>{erase()}, 200);
+		}
+	}
+</script>
 </body>
 </html>
