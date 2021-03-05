@@ -1,6 +1,8 @@
 # Moovie
 
-This is a node module that helps to search for moovies with movie titles.
+[Note: Documentation Comming soon....]
+
+This is a node module that helps to search for moovies with movie titles and also search for its plot ad cast.
 
 This is not a function or class to be used directly.
 
