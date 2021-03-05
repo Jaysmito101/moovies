@@ -1,11 +1,12 @@
 {
   "name": "moovies",
-  "version": "1.0.3",
-  "description": "Movie Details API",
+  "version": "1.0.4",
+  "description": "Movie Details API & Backend",
   "main": "moovies.js",
   "git": "https://github.com/Jaysmito101/JSMovie.git",
   "author": "Jaysmito Mukherjee",
   "license": "MIT",
+  "tags":["movies", "api", "backend", "alpha", "search"],
   "dependencies": {
     "beautiful-scrape": "^0.0.3",
     "express": "^4.17.1",
